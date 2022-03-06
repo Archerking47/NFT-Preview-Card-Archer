@@ -1,0 +1,151 @@
+/* Variables */
+
+/* colors */
+
+:root {
+  /* Primary */
+
+  --Soft_blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+
+  /* (main BG) */
+  --main_BG: hsl(217, 54%, 11%);
+  /* (card BG) */
+  --card_BG: hsl(216, 50%, 16%);
+  /* (line) */
+  --Very_dark_blue: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--Soft_blue);
+  background-color: var(--main_BG);
+}
+
+.card {
+  background-color: var(--card_BG);
+  width: 35rem;
+  margin: 15.2rem auto;
+  padding: 2.5rem;
+  border-radius: 2rem;
+
+  /* display: flex;
+  flex-direction: column;
+  gap: 2rem; */
+}
+
+.main-image {
+  width: 100%;
+  transition: all 0.3s;
+  /* border-radius: 1rem; */
+  /* opacity: 50%; */
+}
+
+.img-box {
+  position: relative;
+  height: 30rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.icon-view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 10;
+}
+
+.img-box:hover .icon-view {
+  display: inline-block;
+}
+
+.img-box:hover {
+  background-color: var(--Cyan);
+}
+
+.img-box:hover .main-image {
+  opacity: 40%;
+}
+
+.title-text {
+  /* display: inline-block; */
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--White);
+  margin: 2rem 0;
+}
+
+.title-text:hover {
+  cursor: pointer;
+  color: var(--Cyan);
+}
+
+.description-text {
+  line-height: 1.5;
+  margin: 2rem 0;
+}
+
+.status-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.value-box,
+.time-left-box {
+  /* font-size: 1.6rem; */
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.value-box {
+  font-weight: 700;
+  color: var(--Cyan);
+}
+
+hr {
+  border: none;
+  border-top: var(--Very_dark_blue) solid 1px;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 3.4rem;
+  border: var(--White) solid 1px;
+}
+
+.author {
+  color: var(--White);
+}
+
+.author:hover {
+  cursor: pointer;
+  color: var(--Cyan);
+}
